@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(243, 243, 243);
+}
+div{
+    position: absolute;
+    background-color: rgb(214, 243, 243);
+    border-width: 10px;
+    border: 1px;
+    padding: 100px;
+    border-radius: 10px;
+    
+}
+input{
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+}
+
+button:active{
+    background-color: #007bff;
+    color: #fff;
+}
+
+button{
+    background: rgb(80, 178, 217);
+    border-width: 0;
+    height: 25;
+    border-radius: 5px;
+    transform: scale(1.3);
+    display: block;
+
+
+}
+
+button{
+    padding: 7px 10px;
+    border-color: aquamarine;
+    border: none;
+    transition: transform 0.3s, background-color 0.3s;
+
+}
+button:hover, button.clicked {
+    transform: scale(1.1);
+    background-color: blueviolet;
+}

@@ -1,0 +1,89 @@
+body {
+    background-color: rgb(245, 240, 235);
+    background-image: url("bild.png");
+
+  }
+
+
+.center{
+    border-width: 10px;
+    border: 1px;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+
+}
+
+h1{
+    display: block;
+    color: rgb(46, 6, 56);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+}
+
+h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.entete{
+    border-width: 10px;
+    border: 1px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(118, 255, 129);
+    display: block;
+    position: absolute;
+}
+    
+button:active{
+    background-color: #007bff;
+    color: #fff;
+}
+
+.buld{
+    background: rgb(80, 178, 217);
+    border-width: 0;
+    height: 25;
+    border-radius: 5px;
+    transform: scale(1.2);
+    display: block;
+    margin-right: 200px;
+
+
+}
+
+.try{
+    background: rgb(80, 217, 110);
+    border-width: 0;
+    height: 25;
+    border-radius: 5px;
+    transform: scale(1.2);
+    display: block;
+    margin-right: 200px;
+
+
+}
+
+.try{
+    padding: 7px 10px;
+    border-color: aquamarine;
+    border: none;
+    transition: transform 0.3s, background-color 0.3s;
+
+}
+.try:hover, .try.clicked {
+    transform: scale(1.1);
+    background-color: blueviolet;
+}
+
+
+.buld{
+    padding: 7px 10px;
+    border-color: aquamarine;
+    border: none;
+    transition: transform 0.3s, background-color 0.3s;
+
+}
+.buld:hover, .buld.clicked {
+    transform: scale(1.1);
+    background-color: blueviolet;
+}

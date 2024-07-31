@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>build</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="..\static\css\build.css">
+
+    </head>
+    <body>
+        <form id="myForm" method="POST">
+        <div class="entete">
+            <h2>buildAi</h2>
+        </div>
+        <div>
+            <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                Bienvenue sur le build ! <br> construisez vos modeles de Zero
+            </h1>
+
+            <textarea name="inputs" id="inputs" cols="40" rows="10" placeholder="Saisissez les entrees ici en les separant par des virgules"></textarea>
+            <textarea name="outputs" id="outputs" cols="40" rows="10" placeholder="Saisissez les sorties ici en les separant par des virgules"></textarea>
+            <p >
+                Les entrees et les sorties servent d'exemple au reseaux de neuronnes que vous allez entraine
+                a chauque entre x <br>doit correspondre une sortie y pour permettre au modele de lier les deux variables.
+            </p>
+            <img src="..\static\image\warning37.png" alt="" width="20">
+            <label for=" " style="color: rgb(211, 58, 58);">les donnees d'entree et de sorties doivent avoir exactement la meme taille ! </label>
+
+            <br><br><br>
+        </form>
+            <table>
+                <tr>
+                    <td>
+                        <button id="upd">
+                            <h2 style="color: rgb(226, 43, 144);">Charger Json</h2>
+                            <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                                Vous pouvez charger <br> votre fichier au format json pour personnaliser</p>
+                            <img src="..\static\image\cloud305.png" alt="" width="20">
+                        </button>
+                    </td>
+                    <td>
+                        <button id="gene">
+                            <h2 style="color: rgb(226, 43, 89);">Generer des donnees</h2>
+
+                            <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><em> Des donnees peuvent etre <br>
+                                 generer pour vous servir</em> <br>
+                            d'exemples <br></p>
+                        </button>  
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Paramettres</h2>
+            <div id="seetings" >
+                <table>
+                    
+                        <tr>
+                            <td>
+                            <label for="my-slider">Nombre de neronnes</label>
+                            <div class="container">
+                                <input type="range" id="my-slider" min="0" max="20" value="1" oninput="slider()" name="nbNeuron">
+                                <div id="slider-value">0</div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <label for="my-slider" style="margin-left: 50px;">Nombre de couches</label>
+
+                            <div class="container" style="margin-left: 50px;">
+
+                                <input type="range" id="my-slider2" min="0" max="20" value="1" oninput="slider2()" name="layers">
+                                <div id="slider-value2">1</div>
+                            </div>
+                        </div>
+                        </td>
+
+                        <td>
+                            <label for="my-slider" style="margin-left: 50px;">Nombre d'iterations</label>
+
+                            <div class="container" style="margin-left: 50px;">
+
+                                <input type="range" id="my-slider3" min="0" max="100000" value="1" oninput="slider3()" name="iter">
+                                <div id="slider-value3">0</div>
+                            </div>
+                        </div>
+                        </td>
+
+                        <td>
+                            <label for="my-slider" style="margin-left: 50px;">Learning Rate</label>
+
+                            <div class="container" style="margin-left: 50px;">
+
+                                <input type="range" id="my-slider4" min="0" max="10" value="1" oninput="slider4()" name="Learning_rate">
+                                <div id="slider-value4">0</div>
+                            </div>
+                        </div>
+                        </td>
+                        </tr>
+
+                </table> <br>
+                <button type="submit" id="bld">Construire</button><br><br>
+                <label for="" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 50px;"><strong>Verdict : </strong></label>
+                <label for="" id="verdict"> none</label><br>
+                <label for="" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 50px;"><strong>Estimation : </strong></label>
+                <label for="" id="estimation"> none</label>
+                
+
+        </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Prediction</h2>
+    <p>
+        avant de passer à la phase de prediction assurez vous d'avoir entrainer votre model sinon les predictions  <br>
+        seront eronnées:
+    </p>
+    <form method="POST" id="myForm1" action="/executer_code">
+
+        <table>
+            <tr>
+                <td>
+    
+                    <textarea name="input" id="inp" cols="30" rows="3" style="font-size: 20px;" placeholder="Saisir une valeur"></textarea>
+                    <textarea name="" id="value_predict" cols="10" rows="3" style="font-size: 20px;"></textarea> <br> <br>                
+
+                </td>
+            </tr>
+        </table>
+        
+        <button type="submit" id="pred">Prediction</button><br><br>
+    </form>
+        <script src="{{ url_for('static', filename='JavaScript/script.js') }}"></script>>
+
+    </body>
+</html>
+

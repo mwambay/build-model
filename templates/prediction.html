@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    </head>
+    <body>
+        <form id="myForm" method="POST">
+            <table>
+                <tr>
+                    <td>  
+                        <textarea name="entre" id="inp" cols="30" rows="3"></textarea>
+                        <textarea name="" id="value_predict" cols="5" rows="3"></textarea> <br> <br>
+
+                    </td>
+                </tr>
+            </table>
+            
+            <button type="submit" id="pred">Prediction</button><br><br>
+        </form>
+        <script src="{{ url_for('static', filename='JavaScript/index.js') }}"></script>>
+
+    </body>
+</html>
